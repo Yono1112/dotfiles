@@ -1,0 +1,8 @@
+[include]
+	# include ~/.gitconfig.lcoal
+	path = ~/.gitconfig.local
+[maintenance]
+	repo = /Users/yumaohno/app/zsh-autocomplete
+	repo = /Users/yumaohno/app/zsh-snap
+[safe]
+	directory = /Users/yumaohno/01-hello-world/Documents/ethereum/01-hello-world
