@@ -1,0 +1,25 @@
+" 行番号を表示
+set number
+" set relativenumber
+" 現在の行を強調表示
+set cursorline
+" 改行時に前の行のインデントを継続する
+set autoindent
+" 検索している文字列を入力中にハイライト
+set incsearch
+" 検索している文字列を入力中に全てハイライト
+set hlsearch
+
+set showcmd
+
+" diffsplit を実行したときのデフォルトの分割方向を左右にする
+set diffopt+=vertical
+
+" swpファイル出力無効
+set noswapfile
+
+" colorscheme habamax
+
+set clipboard+=unnamed
+
+syntax enable
