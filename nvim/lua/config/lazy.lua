@@ -31,6 +31,11 @@ opt.clipboard = 'unnamedplus'
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- key mappings
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', {
+  desc = 'Toggle nvim-tree file explorer'
+})
+
 -- setup lazy.nvim
 require("lazy").setup({
   spec = {
