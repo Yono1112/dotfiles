@@ -27,6 +27,9 @@ opt.swapfile = false
 
 opt.clipboard = 'unnamedplus'
 
+-- gitsign用のsigncolumnを常に表示する
+opt.signcolumn = "yes"
+
 -- mapping settings
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
