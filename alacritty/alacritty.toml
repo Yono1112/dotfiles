@@ -1,0 +1,11 @@
+# tokyonightのcolor schemeが適用されるはずだけど、なぜかできない
+[general]
+import = ["~/.local/share/nvim/lazy/tokyonight.nvim/extras/alacritty/tokyonight.toml"]
+
+[window]
+startup_mode = "Maximized" # "Windowed" | "Maximized" | "Fullscreen" | "SimpleFullscreen"
+opacity = 0.8
+decorations = "Full" # "Full" | "None" | "Transparent" | "Buttonless"
+
+[font]
+normal = { family = "Hack Nerd Font", style = "Regular" }

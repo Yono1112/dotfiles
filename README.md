@@ -6,6 +6,7 @@
 - **tmux**
 - **Zsh**
 - **Git**
+- **Alacritty**
 
 ## Installation
 

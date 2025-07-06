@@ -100,6 +100,7 @@ create_symlink "$DOT_DIR/vim/vimrc" "$HOME/.vimrc"
 create_symlink "$DOT_DIR/tmux/tmux.conf" "$HOME/.tmux.conf"
 create_symlink "$DOT_DIR/zsh/zshrc" "$HOME/.zshrc"
 create_symlink "$DOT_DIR/git/gitconfig" "$HOME/.gitconfig"
+create_symlink "$DOT_DIR/alacritty/alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"
 
 # Conditionally link the .vim directory if it exists.
 if [ -d "$DOT_DIR/vim/.vim" ]; then
