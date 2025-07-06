@@ -5,6 +5,27 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     opts = {
+      renderer = {
+        indent_width = 1,
+        group_empty = true,
+        full_name = true,
+	indent_markers = {
+          enable = true,
+	  inline_arrows = false,
+          -- icons = {
+          --   corner = "└",
+          --   edge = "│",
+          --   item = "│",
+          --   none = " ",
+          -- },
+	},
+      },
+      view = {
+	width = {
+	  min = 30,
+	  max = 50,
+	},
+      },
       sort_by = "name",
       update_focused_file = {
         enable = true,
