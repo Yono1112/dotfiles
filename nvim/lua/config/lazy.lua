@@ -27,6 +27,8 @@ opt.swapfile = false
 
 opt.clipboard = 'unnamedplus'
 
+opt.termguicolors = true
+
 -- gitsign用のsigncolumnを常に表示する
 opt.signcolumn = "yes"
 
