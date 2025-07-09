@@ -30,6 +30,7 @@ return {
       update_focused_file = {
         enable = true,
         update_root = true,
+	ignore_list = { "help" },
       },
       on_attach = function(bufnr)
         local api = require("nvim-tree.api")
