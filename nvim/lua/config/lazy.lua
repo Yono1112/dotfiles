@@ -39,15 +39,11 @@ vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', {
   desc = 'Toggle nvim-tree file explorer'
 })
 
--- Custom clipboard mappings
--- Normal y/p commands use vim registers (default behavior)
--- Leader + y/p commands use system clipboard
-vim.keymap.set({'n', 'v'}, '<leader>y', '"+y', { desc = 'Yank to clipboard' })
-vim.keymap.set({'n', 'v'}, '<leader>Y', '"+Y', { desc = 'Yank line to clipboard' })
-
--- Paste from clipboard
-vim.keymap.set({'n', 'v'}, '<leader>p', '"+p', { desc = 'Paste from clipboard' })
-vim.keymap.set({'n', 'v'}, '<leader>P', '"+P', { desc = 'Paste from clipboard before' })
+-- クリップボード操作: y/pは通常レジスタ、<leader>y/pはシステムクリップボード
+vim.keymap.set({'n', 'v'}, '<leader>y', '"+y', { desc = 'クリップボードにヤンク' })
+vim.keymap.set({'n', 'v'}, '<leader>Y', '"+Y', { desc = '行をクリップボードにヤンク' })
+vim.keymap.set({'n', 'v'}, '<leader>p', '"+p', { desc = 'クリップボードからペースト' })
+vim.keymap.set({'n', 'v'}, '<leader>P', '"+P', { desc = 'クリップボードから前にペースト' })
 
 -- setup lazy.nvim
 require("lazy").setup({
