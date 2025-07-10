@@ -25,8 +25,6 @@ opt.cursorline = true
 
 opt.swapfile = false
 
-opt.clipboard = 'unnamedplus'
-
 opt.termguicolors = true
 
 -- gitsign用のsigncolumnを常に表示する
@@ -40,6 +38,12 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', {
   desc = 'Toggle nvim-tree file explorer'
 })
+
+-- クリップボード操作: y/pは通常レジスタ、<leader>y/pはシステムクリップボード
+vim.keymap.set({'n', 'v'}, '<leader>y', '"+y', { desc = 'クリップボードにヤンク' })
+vim.keymap.set({'n', 'v'}, '<leader>Y', '"+Y', { desc = '行をクリップボードにヤンク' })
+vim.keymap.set({'n', 'v'}, '<leader>p', '"+p', { desc = 'クリップボードからペースト' })
+vim.keymap.set({'n', 'v'}, '<leader>P', '"+P', { desc = 'クリップボードから前にペースト' })
 
 -- setup lazy.nvim
 require("lazy").setup({
