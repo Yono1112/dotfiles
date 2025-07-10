@@ -41,6 +41,19 @@ vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', {
   desc = 'Toggle nvim-tree file explorer'
 })
 
+-- Override delete operations to use black hole register (prevent clipboard copy)
+vim.keymap.set('n', 'd', '"_d', { desc = 'Delete without copying to clipboard' })
+vim.keymap.set('x', 'd', '"_d', { desc = 'Delete without copying to clipboard' })
+vim.keymap.set('n', 'dd', '"_dd', { desc = 'Delete line without copying to clipboard' })
+vim.keymap.set('n', 'D', '"_D', { desc = 'Delete to end of line without copying to clipboard' })
+vim.keymap.set('n', 'x', '"_x', { desc = 'Delete character without copying to clipboard' })
+vim.keymap.set('n', 'X', '"_X', { desc = 'Delete character before cursor without copying to clipboard' })
+vim.keymap.set('n', 'c', '"_c', { desc = 'Change without copying to clipboard' })
+vim.keymap.set('x', 'c', '"_c', { desc = 'Change without copying to clipboard' })
+vim.keymap.set('n', 'C', '"_C', { desc = 'Change to end of line without copying to clipboard' })
+vim.keymap.set('n', 's', '"_s', { desc = 'Substitute character without copying to clipboard' })
+vim.keymap.set('n', 'S', '"_S', { desc = 'Substitute line without copying to clipboard' })
+
 -- setup lazy.nvim
 require("lazy").setup({
   spec = {
