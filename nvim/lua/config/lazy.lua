@@ -25,8 +25,6 @@ opt.cursorline = true
 
 opt.swapfile = false
 
-opt.clipboard = 'unnamedplus'
-
 opt.termguicolors = true
 
 -- gitsign用のsigncolumnを常に表示する
@@ -40,6 +38,18 @@ vim.g.maplocalleader = "\\"
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', {
   desc = 'Toggle nvim-tree file explorer'
 })
+
+-- Custom clipboard mappings for yank operations
+-- These mappings ensure yank operations copy to system clipboard
+-- while delete operations use the default register
+vim.keymap.set({'n', 'v'}, '<leader>y', '"+y', { desc = 'Yank to clipboard' })
+vim.keymap.set({'n', 'v'}, '<leader>Y', '"+Y', { desc = 'Yank line to clipboard' })
+vim.keymap.set({'n', 'v'}, 'y', '"+y', { desc = 'Yank to clipboard' })
+vim.keymap.set({'n', 'v'}, 'Y', '"+Y', { desc = 'Yank line to clipboard' })
+
+-- Paste from clipboard
+vim.keymap.set({'n', 'v'}, '<leader>p', '"+p', { desc = 'Paste from clipboard' })
+vim.keymap.set({'n', 'v'}, '<leader>P', '"+P', { desc = 'Paste from clipboard before' })
 
 -- setup lazy.nvim
 require("lazy").setup({
