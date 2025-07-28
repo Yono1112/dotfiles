@@ -15,6 +15,13 @@ return {
       "markdown",
       "markdown_inline",
       "terraform",
-    }):wait()
+      "python",
+      "yaml",
+      "toml",
+      "cpp",
+      "bash",
+      "javascript",
+    })
+    -- }):wait()
   end,
 }
