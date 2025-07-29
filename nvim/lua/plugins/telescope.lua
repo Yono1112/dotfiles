@@ -6,6 +6,9 @@ return {
     require('telescope').setup({
       defaults = {
         winblend = 30,
+        preview = {
+          treesitter = false,
+        },
       },
     })
 
