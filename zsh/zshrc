@@ -24,6 +24,7 @@ alias gad='git add .'
 alias gps='git push'
 alias gpl='git pull'
 alias code="open -a 'Visual Studio Code'"
+alias ta='tmux a'
 
 # Docker Desktop
 # source /Users/hoge/.docker/init-zsh.sh || true
