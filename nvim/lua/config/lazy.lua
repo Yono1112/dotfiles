@@ -5,14 +5,14 @@ vim.g.loaded_netrwPlugin = 1
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable",
-    lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable",
+		lazypath,
+	})
 end
 
 -- vim.opt settings
@@ -35,23 +35,26 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- key mappings
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', {
-  desc = 'Toggle nvim-tree file explorer'
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", {
+	desc = "nvim-treeをトグルする",
 })
 
 -- クリップボード操作: y/pは通常レジスタ、<leader>y/pはシステムクリップボード
-vim.keymap.set({'n', 'v'}, '<leader>y', '"+y', { desc = 'クリップボードにヤンク' })
-vim.keymap.set({'n', 'v'}, '<leader>Y', '"+Y', { desc = '行をクリップボードにヤンク' })
-vim.keymap.set({'n', 'v'}, '<leader>p', '"+p', { desc = 'クリップボードからペースト' })
-vim.keymap.set({'n', 'v'}, '<leader>P', '"+P', { desc = 'クリップボードから前にペースト' })
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "クリップボードにヤンク" })
+vim.keymap.set({ "n", "v" }, "<leader>Y", '"+Y', { desc = "行をクリップボードにヤンク" })
+vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "クリップボードからペースト" })
+vim.keymap.set({ "n", "v" }, "<leader>P", '"+P', { desc = "クリップボードから前にペースト" })
+vim.keymap.set("n", "<leader>ya", "ma:%y+<CR>`a", {
+	desc = "ファイル全体をクリップボードにコピー",
+})
 
 -- setup lazy.nvim
 require("lazy").setup({
-  spec = {
-     { import = "plugins" },
-  },
+	spec = {
+		{ import = "plugins" },
+	},
 
-  checker = {
-    enabled = false,
-  },
+	checker = {
+		enabled = false,
+	},
 })
