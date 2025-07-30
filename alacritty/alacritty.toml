@@ -4,7 +4,7 @@ import = ["~/.local/share/nvim/lazy/tokyonight.nvim/extras/alacritty/tokyonight.
 
 [window]
 startup_mode = "Maximized" # "Windowed" | "Maximized" | "Fullscreen" | "SimpleFullscreen"
-opacity = 0.8
+opacity = 0.9
 decorations = "Full" # "Full" | "None" | "Transparent" | "Buttonless"
 
 [font]
