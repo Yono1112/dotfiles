@@ -10,6 +10,10 @@ return {
 				lua = { "stylua" },
 				rust = { "rustfmt" },
 				typescript = { "prettier" },
+				typescriptreact = { "prettier" },
+				tsx = { "prettier" },
+				css = { "prettier" },
+				scss = { "prettier" },
 			},
 		})
 	end,
