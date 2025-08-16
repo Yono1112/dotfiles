@@ -30,19 +30,19 @@ alias ta='tmux a'
 # source /Users/hoge/.docker/init-zsh.sh || true
 
 # Node.js
-# export NVM_DIR="$HOME/.config/nvm"
-# lazy_load_nvm() {
-#   unset -f nvm node npm
-#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-#   nvm "$@"
-# }
-# node() {
-#   unset -f nvm node npm
-#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-#   node "$@"
-# }
-# npm() {
-#   unset -f nvm node npm
-#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-#   npm "$@"
-# }
+export NVM_DIR="$HOME/.config/nvm"
+lazy_load_nvm() {
+  unset -f nvm node npm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  nvm "$@"
+}
+node() {
+  unset -f nvm node npm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  node "$@"
+}
+npm() {
+  unset -f nvm node npm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  npm "$@"
+}
