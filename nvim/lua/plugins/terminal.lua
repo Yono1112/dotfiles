@@ -3,7 +3,6 @@ return {
 	version = "*",
 	opts = {
 		direction = "horizontal",
-		open_mapping = [[<leader>j]],
 		start_in_insert = true,
 		size = function(term)
 			if term.direction == "horizontal" then
@@ -15,6 +14,8 @@ return {
 	},
 	config = function(_, opts)
 		require("toggleterm").setup(opts)
+
+		vim.keymap.set("n", "<leader>j", "<Cmd>ToggleTerm<CR>", { desc = "Toggle Terminal" })
 
 		function _G.set_terminal_keymaps()
 			local t_opts = { buffer = 0 }

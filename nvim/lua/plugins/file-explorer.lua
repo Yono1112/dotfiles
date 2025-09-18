@@ -32,10 +32,10 @@ return {
 				update_root = true,
 				ignore_list = { "help" },
 			},
-			update_watcher = {
-				enable = true,
-				debounce_delay_ms = 50,
-			},
+			-- update_watcher = {
+			-- 	enable = true,
+			-- 	debounce_delay_ms = 50,
+			-- },
 
 			git = {
 				enable = true,
