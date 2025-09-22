@@ -31,23 +31,9 @@ alias ta='tmux a'
 # Docker Desktop
 # source /Users/hoge/.docker/init-zsh.sh || true
 
-# Node.js
 export NVM_DIR="$HOME/.config/nvm"
-lazy_load_nvm() {
-  unset -f nvm node npm
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  nvm "$@"
-}
-node() {
-  unset -f nvm node npm
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  node "$@"
-}
-npm() {
-  unset -f nvm node npm
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  npm "$@"
-}
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
