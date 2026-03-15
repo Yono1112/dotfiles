@@ -26,7 +26,9 @@ alias gpl='git pull'
 alias gst='git status'
 alias glg='git log --oneline'
 alias code="open -a 'Visual Studio Code'"
-alias ta='tmux a'
+alias tma='tmux a'
+alias tm='tmux'
+alias sshga='ssh -p 8022 u0_a310@galaxy-a25-5g'
 
 # Docker Desktop
 # source /Users/hoge/.docker/init-zsh.sh || true
@@ -43,3 +45,17 @@ if [ -f '/Users/yumaohno/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/yumaoh
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/yumaohno/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/yumaohno/google-cloud-sdk/completion.zsh.inc'; fi
+
+# bun completions
+[ -s "/Users/yumaohno/.bun/_bun" ] && source "/Users/yumaohno/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/yumaohno/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# OpenClaw Completion
+source "/Users/yumaohno/.openclaw/completions/openclaw.zsh"
